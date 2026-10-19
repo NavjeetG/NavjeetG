@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vivek Prasad — Resume</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #1f2328;
+    background: #ffffff;
+  }
+  .page { width: 100%; background: #ffffff; }
+
+  /* Header */
+  .header {
+    background: #0d1b3e;
+    padding: 32px 44px 26px;
+    border-bottom: 4px solid #c9a84c;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+  .tagline {
+    font-size: 11.5px;
+    color: #c9a84c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .contact-block { text-align: right; }
+  .contact-block p {
+    font-size: 12px;
+    color: #b0bfd8;
+    margin-bottom: 2px;
+  }
+
+  /* Body */
+  .body { padding: 28px 44px 36px; }
+
+  /* Section */
+  .section { margin-bottom: 22px; }
+  .section-title {
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0d1b3e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .section-title::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 15px;
+    background: #c9a84c;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dde2eb;
+  }
+
+  /* Objective */
+  .objective p {
+    font-size: 13px;
+    color: #3a3f4a;
+    line-height: 1.75;
+  }
+
+  /* Experience */
+  .job {
+    margin-bottom: 18px;
+    padding-left: 14px;
+    border-left: 2px solid #dde2eb;
+  }
+  .job:last-child { margin-bottom: 0; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+  .job-company {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0d1b3e;
+  }
+  .job-dates {
+    font-size: 11px;
+    color: #ffffff;
+    background: #c9a84c;
+    padding: 1px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .job-title {
+    font-size: 12px;
+    color: #3b6dbf;
+    margin-bottom: 7px;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .job ul { list-style: none; padding: 0; }
+  .job ul li {
+    font-size: 12.5px;
+    color: #3a3f4a;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 3px;
+    line-height: 1.6;
+  }
+  .job ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #c9a84c;
+    font-size: 10px;
+    top: 2px;
+  }
+
+  /* Education */
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 7px 0;
+    border-bottom: 1px dashed #e5e9f0;
+  }
+  .edu-item:last-child { border-bottom: none; }
+  .edu-degree { font-size: 13px; color: #1f2328; font-weight: 600; }
+  .edu-school { font-size: 12px; color: #57606a; }
+  .edu-year {
+    font-size: 11px;
+    color: #ffffff;
+    background: #0d1b3e;
+    padding: 1px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+  .skill-item {
+    font-size: 12.5px;
+    color: #3a3f4a;
+    padding: 5px 10px;
+    background: #f4f6fb;
+    border-left: 3px solid #c9a84c;
+    border-radius: 2px;
+  }
+
+  /* Two-col */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+    page-break-before: always;
+    break-before: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding-top: 40px;
+  }
+  .simple-list { list-style: none; padding: 0; }
+  .simple-list li {
+    font-size: 13px;
+    color: #3a3f4a;
+    margin-bottom: 4px;
+    padding-left: 14px;
+    position: relative;
+  }
+  .simple-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #c9a84c;
+    font-size: 10px;
+    top: 2px;
+  }
+
+  /* Declaration */
+  .section-declaration {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  /* Declaration */
+  .declaration-box {
+    background: #f4f6fb;
+    border-left: 4px solid #0d1b3e;
+    padding: 12px 16px;
+    border-radius: 2px;
+  }
+  .declaration-box p {
+    font-size: 12.5px;
+    color: #3a3f4a;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .sign-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #57606a;
+  }
+  .sign-row span strong { color: #0d1b3e; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-inner">
+      <div>
+        <h1>Vivek Prasad</h1>
+        <div class="tagline">Sales Executive &nbsp;·&nbsp; Building Materials</div>
+      </div>
+      <div class="contact-block">
+        <p>+91-9634112964</p>
+        <p>gopikanswal9760@gmail.com</p>
+        <p>Tehri Garhwal, Uttarakhand</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="section objective">
+      <div class="section-title">Objective</div>
+      <p>Seeks an opportunity to utilize sales expertise and customer engagement skills to exceed sales targets and foster long-term client relationships in a challenging and growth-oriented workplace. Dynamic, goal-oriented, and determined sales professional with over 4 years of proven experience in the building materials industry, looking for opportunities to grow as a sales and business development professional.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Shiva Sanitary Store, Kajaria Prima Plus — Uttarkashi</span>
+          <span class="job-dates">Sep 2024 – Present</span>
+        </div>
+        <div class="job-title">Sales Executive</div>
+        <ul>
+          <li>Strengthened customer relationships and assisted in client queries and issue resolution.</li>
+          <li>Played a key role in promoting sales across the Garhwal region.</li>
+          <li>Supported dealer development and retail expansion across the territory.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Adwani Brothers, Kajaria Prima Plus — Rishikesh</span>
+          <span class="job-dates">Aug 2020 – Jun 2023</span>
+        </div>
+        <div class="job-title">Sales Executive</div>
+        <ul>
+          <li>Engaged with customers and architects to present product offerings and drive purchase decisions.</li>
+          <li>Consistently achieved monthly sales targets through effective dealer network collaboration.</li>
+          <li>Conducted competitor and market analysis to enhance sales strategy.</li>
+          <li>Ensured showroom display alignment with brand guidelines.</li>
+          <li>Handled payment collections and managed outstanding follow-ups.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div><div class="edu-degree">B.Sc. (Information Technology)</div><div class="edu-school">Modern Institute of Technology, Rishikesh</div></div>
+        <span class="edu-year">2019</span>
+      </div>
+      <div class="edu-item">
+        <div><div class="edu-degree">Intermediate — Science</div><div class="edu-school">G.I.C. Naul-Basar, Tehri Garhwal</div></div>
+        <span class="edu-year">2016</span>
+      </div>
+      <div class="edu-item">
+        <div><div class="edu-degree">High School</div><div class="edu-school">G.I.C. Naul-Basar, Tehri Garhwal</div></div>
+        <span class="edu-year">2014</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-item">B2C &amp; B2B Sales</div>
+        <div class="skill-item">Dealer &amp; Channel Management</div>
+        <div class="skill-item">Customer Relationship Management</div>
+        <div class="skill-item">Market &amp; Competitor Analysis</div>
+        <div class="skill-item">Target Achievement</div>
+        <div class="skill-item">Payment Collection &amp; Follow-up</div>
+        <div class="skill-item">Product Presentation &amp; Promotion</div>
+        <div class="skill-item">MS Office Proficiency</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">Languages</div>
+        <ul class="simple-list">
+          <li>Hindi</li>
+          <li>English</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Hobbies</div>
+        <ul class="simple-list">
+          <li>Travelling</li>
+          <li>Photography</li>
+          <li>Cooking</li>
+          <li>Listening to Music</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col" style="page-break-before: avoid; break-before: avoid; padding-top: 16px;">
+      <div class="section">
+        <div class="section-title">Personal Details</div>
+        <ul class="simple-list">
+          <li><strong>Marital Status:</strong> Single</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section section-declaration">
+      <div class="section-title">Declaration</div>
+      <div class="declaration-box">
+        <p>I hereby declare that the information provided above is true to the best of my knowledge and belief.</p>
+        <div class="sign-row">
+          <span><strong>Date:</strong> 10-07-2026 &nbsp;&nbsp; <strong>Place:</strong> Rishikesh</span>
+          <span><strong>Signature:</strong> Vivek Prasad</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
