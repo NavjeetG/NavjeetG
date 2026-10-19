@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Navjeet Singh — Application Developer & Senior Front-End Engineer at IBM. Specializing in Angular, TypeScript, Enterprise Web Architecture, and Scalable UI Systems.">
+  <meta name="keywords" content="Navjeet Singh, Application Developer, IBM, Angular Developer, TypeScript, Frontend Engineer, Software Engineer, Portfolio">
+  <meta name="author" content="Navjeet Singh">
+  <title>Navjeet Singh | Application Developer @ IBM</title>
+
+  <!-- Google Fonts Preconnect & Inter / JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glow & Canvas Animation -->
+  <div class="bg-glow-orb orb-1"></div>
+  <div class="bg-glow-orb orb-2"></div>
+  <div class="bg-glow-orb orb-3"></div>
+  <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" data-reveal="fade">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Navjeet.dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#credentials" class="nav-link">Credentials</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Connect Button -->
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's Talk</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content" data-reveal="fade-up">
+          <div class="hero-badge animate-float">
+            <span class="status-dot"></span> Application Developer @ <strong>IBM</strong>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight glow-text">Navjeet Singh</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            I build enterprise apps as a <br>
+            <span class="typed-text" id="typed-text">Angular Specialist</span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Software Engineer specializing in front-end architecture using <strong>Angular</strong> for mission-critical enterprise applications. Currently at <strong>IBM</strong>, developing the <strong>Bharti Airtel Network Feasibility Application</strong> (city-to-city &amp; region-to-region telecom path optimization) and previously contributing to the <strong>SBI Enterprise Banking Portal</strong>.
+          </p>
+          <div class="hero-buttons">
+            <a href="#experience" class="btn btn-primary ripple-btn">
+              <span>View Experience</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#projects" class="btn btn-secondary ripple-btn">Featured Work</a>
+            <a href="mailto:navjeetbisht18@gmail.com" class="btn btn-outline ripple-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Hire Me
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="mailto:navjeetbisht18@gmail.com" aria-label="Email" class="social-icon" title="Email: navjeetbisht18@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="tel:7078687558" aria-label="Phone" class="social-icon" title="Call: +91 7078687558">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon" title="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive 3D Tilt Developer Terminal Mockup -->
+        <div class="hero-visual" data-reveal="fade-left">
+          <div class="tilt-card-wrapper">
+            <div class="terminal-card interactive-tilt" id="terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">navjeet@ibm-cloud:~</span>
+                <span class="terminal-status"><span class="pulse-dot"></span> LIVE</span>
+              </div>
+              <div class="terminal-body">
+                <div class="code-line"><span class="cmd-prompt">➜</span> <span class="cmd-folder">~/profile</span> <span class="cmd-text">cat developer.json</span></div>
+                <pre class="code-output"><code>{
+  <span class="json-key">"name"</span>: <span class="json-str">"Navjeet Singh"</span>,
+  <span class="json-key">"role"</span>: <span class="json-str">"Application Developer"</span>,
+  <span class="json-key">"organization"</span>: <span class="json-str">"IBM India Pvt. Ltd."</span>,
+  <span class="json-key">"coreTech"</span>: [
+    <span class="json-str">"Angular (v14-v20)"</span>,
+    <span class="json-str">"TypeScript"</span>,
+    <span class="json-str">"RxJS / NgRx"</span>,
+    <span class="json-str">"Bootstrap & Material UI"</span>,
+    <span class="json-str">"C# .NET & MySQL"</span>
+  ],
+  <span class="json-key">"currentAssignment"</span>: <span class="json-str">"Bharti Airtel Feasibility App"</span>,
+  <span class="json-key">"clientPortfolio"</span>: [
+    <span class="json-str">"Bharti Airtel"</span>,
+    <span class="json-str">"State Bank of India (SBI)"</span>
+  ],
+  <span class="json-key">"certifications"</span>: <span class="json-num">5</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"Optimizing Telecom & Banking UI 🚀"</span>
+}</code></pre>
+                <div class="code-line"><span class="cmd-prompt">➜</span> <span class="cmd-folder">~/profile</span> <span class="cmd-blink">ng serve --open</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics / Stats Bar with Counter Animation -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card" data-reveal="fade-up" data-delay="100">
+          <div class="stat-icon-wrapper">💼</div>
+          <h3 class="stat-number" data-target="4">0</h3>
+          <p class="stat-label">Years of Professional Exp</p>
+        </div>
+        <div class="stat-card" data-reveal="fade-up" data-delay="200">
+          <div class="stat-icon-wrapper">🏢</div>
+          <h3 class="stat-number" data-target="4">0</h3>
+          <p class="stat-label">Industry Companies (Inc. IBM)</p>
+        </div>
+        <div class="stat-card" data-reveal="fade-up" data-delay="300">
+          <div class="stat-icon-wrapper">🏅</div>
+          <h3 class="stat-number" data-target="5">0</h3>
+          <p class="stat-label">IBM Digital Credentials</p>
+        </div>
+        <div class="stat-card" data-reveal="fade-up" data-delay="400">
+          <div class="stat-icon-wrapper">⚡</div>
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p class="stat-label">% Commitment to Quality</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Engineering Secure, High-Performance UI</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-reveal="fade-right">
+            <p>
+              I am a Software Engineer with extensive experience in front-end development using <strong>Angular</strong> for enterprise-scale applications. Currently at <strong>IBM India</strong>, I work on enhancing UI modules, resolving Cyber Security Review (CSR) compliance observations, and collaborating with cross-functional teams to deliver secure, resilient solutions.
+            </p>
+            <p>
+              My background includes revamping production systems at <strong>Nuarch Fintech</strong> with modern SEO and responsive architectures, accelerating UI responsiveness at <strong>Gloify</strong>, and building interactive full-stack applications with C# .NET and MySQL at <strong>Vidhikara Technology</strong>.
+            </p>
+            <p>
+              I proactively stay ahead of the technology curve by mastering the latest <strong>Angular 20</strong> features, Reactive Programming with RxJS, and enterprise design thinking methodologies.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item interactive-tilt">
+                <span class="highlight-icon">🔒</span>
+                <div>
+                  <strong>Enterprise Security & CSR</strong>
+                  <p>Experienced in Cyber Security Review (CSR) remediation, compliance standards, and Java Portal Adapters.</p>
+                </div>
+              </div>
+              <div class="highlight-item interactive-tilt">
+                <span class="highlight-icon">⚡</span>
+                <div>
+                  <strong>Scalable Modern Angular</strong>
+                  <p>Expert in state management, standalone components, dynamic forms, and seamless responsive design.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card interactive-tilt" data-reveal="fade-left">
+            <div class="about-card-badge">PROFILE OVERVIEW</div>
+            <h3>Quick Details</h3>
+            <ul class="details-list">
+              <li><span class="detail-label">Name:</span> <span class="detail-value">Navjeet Singh</span></li>
+              <li><span class="detail-label">Current Org:</span> <span class="detail-value text-accent">IBM India Pvt. Ltd.</span></li>
+              <li><span class="detail-label">Phone:</span> <span class="detail-value">+91 7078687558</span></li>
+              <li><span class="detail-label">Email:</span> <span class="detail-value">navjeetbisht18@gmail.com</span></li>
+              <li><span class="detail-label">Location:</span> <span class="detail-value">India</span></li>
+              <li><span class="detail-label">Languages:</span> <span class="detail-value">Hindi (Fluent), English (Good)</span></li>
+              <li><span class="detail-label">Status:</span> <span class="detail-value badge-success">Open to Opportunities</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Interactive Timeline) -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work Experience</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: IBM -->
+          <div class="timeline-item" data-reveal="fade-up">
+            <div class="timeline-marker ibm-marker">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-content interactive-tilt">
+              <div class="timeline-meta">
+                <div class="role-company">
+                  <span class="timeline-role">Application Developer</span>
+                  <span class="timeline-company-badge">IBM India Pvt. Ltd.</span>
+                </div>
+                <span class="timeline-date">May 2025 - Present</span>
+              </div>
+
+              <!-- Current Assignment: Bharti Airtel -->
+              <div class="timeline-project-highlight" style="margin-bottom: 12px; border-left-color: #ef4444; background: rgba(239, 68, 68, 0.08);">
+                <strong>🌟 Current Assignment: Angular Developer — Bharti Airtel Project</strong>
+              </div>
+              <ul class="timeline-bullets" style="margin-bottom: 18px;">
+                <li>Engineered and scaled the enterprise <strong>Network Feasibility Application</strong> for Bharti Airtel, enabling real-time network feasibility analysis across cities and regions nationwide.</li>
+                <li>Implemented pathfinding UI algorithms to determine, visualize, and recommend the <strong>best feasible network paths</strong>, latency metrics, and optimal routing topologies.</li>
+                <li>Built interactive and responsive data dashboards for telecom engineers to analyze bandwidth capacity, route feasibility, and cross-region node connections.</li>
+                <li>Optimized front-end state management and UI responsiveness for high-volume network telemetry datasets using Angular and RxJS.</li>
+              </ul>
+
+              <!-- Previous Assignment: SBI -->
+              <div class="timeline-project-highlight">
+                <strong>Previous Assignment: Portal UI Developer — State Bank of India (SBI)</strong>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Developed and maintained web-based enterprise portal for secure access to banking services using Angular / AngularJS with Java Portal Adapter integration.</li>
+                <li>Adhered to strict banking security and compliance standards including resolution of Cyber Security Review (CSR) observations.</li>
+                <li>Proactively practiced modern Angular (Angular 20) design patterns for future architectural readiness.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Bharti Airtel Feasibility</span>
+                <span>Network Pathfinding</span>
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>SBI Banking Portal</span>
+                <span>CSR Security</span>
+                <span>RxJS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Nuarch Fintech -->
+          <div class="timeline-item" data-reveal="fade-up">
+            <div class="timeline-marker">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-content interactive-tilt">
+              <div class="timeline-meta">
+                <div class="role-company">
+                  <span class="timeline-role">Angular Developer</span>
+                  <span class="timeline-company-badge">Nuarch Fintech</span>
+                </div>
+                <span class="timeline-date">Oct 2023 - Apr 2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Revamped the entire company fintech website using Angular, significantly improving user experience, Lighthouse performance, and load speeds.</li>
+                <li>Implemented SEO best practices (meta tags, structured schema data, keyword optimization), boosting search engine discovery and organic visibility.</li>
+                <li>Engineered fully responsive, accessible cross-device UI with modern design components.</li>
+                <li>Conducted regular SEO and technical audits to resolve performance bottlenecks and optimize information architecture.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>SEO Optimization</span>
+                <span>Fintech UI</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Gloify -->
+          <div class="timeline-item" data-reveal="fade-up">
+            <div class="timeline-marker">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-content interactive-tilt">
+              <div class="timeline-meta">
+                <div class="role-company">
+                  <span class="timeline-role">Angular Developer</span>
+                  <span class="timeline-company-badge">Gloify</span>
+                </div>
+                <span class="timeline-date">May 2022 - Oct 2023</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Developed scalable, high-performance web applications using Angular, TypeScript, and modern JavaScript.</li>
+                <li>Contributed to UI/UX overhauls that elevated application responsiveness, reducing bounce rates and boosting user engagement.</li>
+                <li>Conducted peer code reviews, guided junior developers, and shared best practices across sprint cycles.</li>
+                <li>Partnered with product managers and business stakeholders to translate complex requirements into clean UI deliverables.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>UI/UX Architecture</span>
+                <span>Peer Code Reviews</span>
+                <span>RxJS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Vidhikara -->
+          <div class="timeline-item" data-reveal="fade-up">
+            <div class="timeline-marker">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-content interactive-tilt">
+              <div class="timeline-meta">
+                <div class="role-company">
+                  <span class="timeline-role">Junior Software Developer</span>
+                  <span class="timeline-company-badge">Vidhikara Technology</span>
+                </div>
+                <span class="timeline-date">Jul 2021 - Apr 2022</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Built dynamic front-end components using Angular, Bootstrap, HTML5, and CSS3.</li>
+                <li>Learned and developed full-stack web applications utilizing C# .NET and MySQL in a high-velocity production environment.</li>
+                <li>Designed and optimized MySQL relational database schemas to ensure reliable data flow and query efficiency.</li>
+                <li>Enhanced client-side interactivity and data handling across core web modules.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Angular</span>
+                <span>Bootstrap</span>
+                <span>C# .NET</span>
+                <span>MySQL</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">Key Assignments & Deliverables</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="project-filters" data-reveal="fade-up">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="enterprise">Enterprise & Banking</button>
+          <button class="filter-btn" data-filter="fintech">Fintech & Web</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack (.NET/MySQL)</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Bharti Airtel Network Feasibility Engine -->
+          <article class="project-card interactive-tilt" data-category="enterprise" data-reveal="fade-up">
+            <div class="project-header">
+              <span class="project-tag" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border-color: rgba(239, 68, 68, 0.3);">Telecom Feasibility</span>
+              <div class="project-status-badge" style="color: #f87171; border-color: rgba(239, 68, 68, 0.25);">Bharti Airtel • IBM</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Bharti Airtel Network Feasibility Application</h3>
+              <p class="project-desc">
+                Enterprise telecom feasibility platform built with Angular to determine network availability and feasibility from city to city and region to region. Dynamically calculates and visualizes the best feasible network paths, hop latency, and bandwidth routes.
+              </p>
+              <div class="project-features">
+                <span>🌐 City-to-City Feasibility</span>
+                <span>📍 Best Feasible Path Algorithm UI</span>
+                <span>⚡ Latency &amp; Bandwidth Routing</span>
+              </div>
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Network Topology UI</span>
+                <span>RxJS State</span>
+                <span>SCSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: SBI Enterprise Portal -->
+          <article class="project-card interactive-tilt" data-category="enterprise" data-reveal="fade-up" data-delay="100">
+            <div class="project-header">
+              <span class="project-tag enterprise-tag">Enterprise Banking</span>
+              <div class="project-status-badge">SBI • IBM</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SBI Web-Based Enterprise Portal</h3>
+              <p class="project-desc">
+                High-security enterprise web portal built for State Bank of India providing authorized access to business services. Engineered with strict Cyber Security Review (CSR) remediation, responsive UI modules, and seamless Java Portal Adapter integration.
+              </p>
+              <div class="project-features">
+                <span>🛡️ CSR Security Fixes</span>
+                <span>⚡ High-Availability UI</span>
+                <span>🚀 Angular 20 Readiness</span>
+              </div>
+              <div class="project-tech">
+                <span>Angular / AngularJS</span>
+                <span>TypeScript</span>
+                <span>Java Adapter</span>
+                <span>Cyber Security</span>
+                <span>CSS3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Nuarch Fintech Platform -->
+          <article class="project-card interactive-tilt" data-category="fintech" data-reveal="fade-up" data-delay="100">
+            <div class="project-header">
+              <span class="project-tag fintech-tag">Fintech Platform</span>
+              <div class="project-status-badge">Production Revamp</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nuarch Fintech Platform Revamp</h3>
+              <p class="project-desc">
+                Complete architectural overhaul of the company's financial portal using modern Angular. Integrated SEO schema metadata, optimized rendering pipeline, and engineered fluid multi-device responsive interfaces.
+              </p>
+              <div class="project-features">
+                <span>📈 Enhanced SEO Rankings</span>
+                <span>📱 100% Cross-Device Responsive</span>
+                <span>⚡ Rapid Page Speeds</span>
+              </div>
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Material UI</span>
+                <span>SEO Architecture</span>
+                <span>SCSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Gloify Web Application -->
+          <article class="project-card interactive-tilt" data-category="fintech" data-reveal="fade-up" data-delay="200">
+            <div class="project-header">
+              <span class="project-tag web-tag">Interactive Web</span>
+              <div class="project-status-badge">Scalable UI</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gloify Scalable Client Web Apps</h3>
+              <p class="project-desc">
+                Engineered high-performance client-facing web applications with interactive data dashboards, custom Angular components, dynamic state management, and reusable UI library integrations.
+              </p>
+              <div class="project-features">
+                <span>🔄 Reactive RxJS Streams</span>
+                <span>✨ Modular Components</span>
+                <span>🤝 Stakeholder Alignment</span>
+              </div>
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>RxJS</span>
+                <span>Bootstrap</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Vidhikara Full-Stack App -->
+          <article class="project-card interactive-tilt" data-category="fullstack" data-reveal="fade-up" data-delay="300">
+            <div class="project-header">
+              <span class="project-tag fullstack-tag">Full Stack</span>
+              <div class="project-status-badge">C# .NET & MySQL</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Vidhikara Interactive Web Platform</h3>
+              <p class="project-desc">
+                Interactive web application combining Angular frontend components with robust C# .NET backend services and structured MySQL relational database architecture for smooth data flow.
+              </p>
+              <div class="project-features">
+                <span>🗄️ Relational DB Design</span>
+                <span>⚡ .NET API Integration</span>
+                <span>🎯 Dynamic UI Controls</span>
+              </div>
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>C# .NET</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>jQuery</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Technical Skills & Expertise</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Category 1: Front-End Core -->
+          <div class="skill-category-card interactive-tilt" data-reveal="fade-right">
+            <div class="category-header">
+              <div class="cat-icon-badge">🅰️</div>
+              <div>
+                <h3>Front-End Core & Frameworks</h3>
+                <p>Primary specialization in Angular ecosystem</p>
+              </div>
+            </div>
+            <div class="skills-chips">
+              <span class="chip chip-highlight">Angular (v14 - v20)</span>
+              <span class="chip chip-highlight">TypeScript</span>
+              <span class="chip">JavaScript (ES6+)</span>
+              <span class="chip">AngularJS</span>
+              <span class="chip">RxJS</span>
+              <span class="chip">HTML5 / CSS3</span>
+              <span class="chip">Bootstrap</span>
+              <span class="chip">Material UI</span>
+              <span class="chip">jQuery</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Database -->
+          <div class="skill-category-card interactive-tilt" data-reveal="fade-left">
+            <div class="category-header">
+              <div class="cat-icon-badge">⚙️</div>
+              <div>
+                <h3>Backend & Database</h3>
+                <p>Enterprise integrations and data layers</p>
+              </div>
+            </div>
+            <div class="skills-chips">
+              <span class="chip chip-highlight">C# .NET</span>
+              <span class="chip chip-highlight">MySQL Database</span>
+              <span class="chip">RESTful APIs</span>
+              <span class="chip">Java Portal Adapter Integration</span>
+              <span class="chip">JSON Data Modeling</span>
+              <span class="chip">CRUD Operations</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Enterprise & Security -->
+          <div class="skill-category-card interactive-tilt" data-reveal="fade-right">
+            <div class="category-header">
+              <div class="cat-icon-badge">🛡️</div>
+              <div>
+                <h3>Enterprise, Security & Compliance</h3>
+                <p>Banking standards & quality practices</p>
+              </div>
+            </div>
+            <div class="skills-chips">
+              <span class="chip chip-highlight">Cyber Security Review (CSR)</span>
+              <span class="chip">Enterprise Banking UI</span>
+              <span class="chip">Enterprise Design Thinking</span>
+              <span class="chip">SEO Audits & Optimization</span>
+              <span class="chip">Web Accessibility</span>
+              <span class="chip">Performance Optimization</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Methodologies -->
+          <div class="skill-category-card interactive-tilt" data-reveal="fade-left">
+            <div class="category-header">
+              <div class="cat-icon-badge">🚀</div>
+              <div>
+                <h3>Tools & Methodologies</h3>
+                <p>Collaborative workflows and engineering discipline</p>
+              </div>
+            </div>
+            <div class="skills-chips">
+              <span class="chip">Git / GitHub</span>
+              <span class="chip">IBM Garage Essentials</span>
+              <span class="chip">Agile / Scrum Cycles</span>
+              <span class="chip">Peer Code Reviews</span>
+              <span class="chip">Cross-Functional Collaboration</span>
+              <span class="chip">VS Code / DevTools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital Credentials & Certifications Section -->
+    <section class="section credentials-section" id="credentials">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">Badges & Recognition</span>
+          <h2 class="section-title">IBM Digital Credentials & Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- Badge 1 -->
+          <div class="credential-card interactive-tilt" data-reveal="fade-up" data-delay="100">
+            <div class="cred-icon">🤖</div>
+            <div class="cred-badge-tag">IBM • 2025</div>
+            <h3 class="cred-title">IBM Generative & Agentic AI Foundation</h3>
+            <p class="cred-desc">Foundational credentials in next-generation Generative and Agentic AI architectures.</p>
+          </div>
+
+          <!-- Badge 2 -->
+          <div class="credential-card interactive-tilt" data-reveal="fade-up" data-delay="150">
+            <div class="cred-icon">💡</div>
+            <div class="cred-badge-tag">IBM • 2025</div>
+            <h3 class="cred-title">Enterprise Design Thinking Practitioner</h3>
+            <p class="cred-desc">Mastery in user-centered enterprise problem framing, empathy mapping, and rapid prototyping.</p>
+          </div>
+
+          <!-- Badge 3 -->
+          <div class="credential-card interactive-tilt" data-reveal="fade-up" data-delay="200">
+            <div class="cred-icon">🏦</div>
+            <div class="cred-badge-tag">IBM • 2025</div>
+            <h3 class="cred-title">Banking Industry Jumpstart</h3>
+            <p class="cred-desc">Specialized domain training covering banking business processes, compliance, and financial technology.</p>
+          </div>
+
+          <!-- Badge 4 -->
+          <div class="credential-card interactive-tilt" data-reveal="fade-up" data-delay="250">
+            <div class="cred-icon">🏎️</div>
+            <div class="cred-badge-tag">IBM • 2025</div>
+            <h3 class="cred-title">IBM Garage Essentials</h3>
+            <p class="cred-desc">Agile practices, rapid value delivery, and cloud-native iterative development methodologies.</p>
+          </div>
+
+          <!-- Badge 5 -->
+          <div class="credential-card interactive-tilt" data-reveal="fade-up" data-delay="300">
+            <div class="cred-icon">📈</div>
+            <div class="cred-badge-tag">IBM • 2025</div>
+            <h3 class="cred-title">IBM Growth Behaviors</h3>
+            <p class="cred-desc">Excellence in continuous learning, ownership, active client focus, and collaborative culture.</p>
+          </div>
+        </div>
+
+        <!-- Education Card Grid -->
+        <div class="education-container" data-reveal="fade-up">
+          <div class="education-header">
+            <h3>🎓 Formal Education</h3>
+          </div>
+          <div class="education-grid">
+            <div class="edu-card interactive-tilt">
+              <div class="edu-degree">Master of Computer Applications (MCA)</div>
+              <div class="edu-field">Information Technology</div>
+              <div class="edu-institution">Uttaranchal University, India</div>
+              <div class="edu-year">Graduated: 2019</div>
+            </div>
+            <div class="edu-card interactive-tilt">
+              <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+              <div class="edu-field">Information Technology</div>
+              <div class="edu-institution">Modern Institute of Technology, India</div>
+              <div class="edu-year">Graduated: 2016</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal="fade-right">
+            <h3>Ready to collaborate on exciting projects?</h3>
+            <p>
+              Whether you have an enterprise project, front-end architecture challenges, or full-time opportunities, my inbox is open!
+            </p>
+
+            <div class="contact-methods">
+              <div class="method-item interactive-tilt">
+                <div class="method-icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:navjeetbisht18@gmail.com">navjeetbisht18@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="method-item interactive-tilt">
+                <div class="method-icon">📞</div>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:7078687558">+91 7078687558</a></p>
+                </div>
+              </div>
+
+              <div class="method-item interactive-tilt">
+                <div class="method-icon">📍</div>
+                <div>
+                  <strong>Location</strong>
+                  <p>India (Open to Hybrid / Remote)</p>
+                </div>
+              </div>
+
+              <div class="method-item interactive-tilt">
+                <div class="method-icon">🏢</div>
+                <div>
+                  <strong>Current Role</strong>
+                  <p>Application Developer, IBM India Pvt. Ltd.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form interactive-tilt" id="contact-form" data-reveal="fade-left">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Hello Navjeet, I would like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block ripple-btn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p>&copy; <span id="year"></span> <strong>Navjeet Singh</strong>. Application Developer @ IBM. Built with high-performance modern web technologies.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
